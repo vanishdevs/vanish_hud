@@ -1,0 +1,1 @@
+lib.versionCheck('vanishdevs/vanish_hud')
