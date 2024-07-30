@@ -1,10 +1,10 @@
 ### Hud System
 
-This resource enhances the user experience by providing a customizable and functional display interface for various game elements. This resource includes several features to improve gameplay visibility and interaction.
+This resource enhances the user experience by providing a customizable and functional display interface for various game elements. This resource includes several features to improve gameplay visibility and interaction. This resource is mostly standalone for it's features meaning it does not use any framework to fetch certain variables, but in order for the status (`thirst, hunger`) to properly work, you will have to integrate another resource with it, ESX status is already integrated for users within.
 
 ### Preview
 
-[Watch the video](https://streamable.com/5u1eo9)
+[Watch the video](https://streamable.com/tn4o8e)
 
 ### Features
 
@@ -25,18 +25,9 @@ This resource enhances the user experience by providing a customizable and funct
 - Ensure you execute the convar configuration file for configuration options to work, you would do this by simple adding `exec @vanish_hud/config.cfg` in the `server.cfg`.
 - Ensure that you have the necessary dependencies installed.
 
-### Configuration
-
-Configure the following parameters in the config:
-
-- `Coords`: The position where the NPC will be located.
-- `Ped`: The model of the NPC (can be found in FiveM docs about peds).
-- `PedAnim`: The scenario the NPC will be performing while standing.
-- `Items`: The contents of the starter pack, defined as a table where the key is the item name and the value is the quantity.
-
 ### Dependencies
 
 Ensure that the following dependency is installed:
 
 - `ox_lib`: [Download here](https://github.com/overextended/ox_lib.git)
-- `esx_status`: [Download here](https://github.com/esx-framework/esx_status) **Only if using ESX, if not configure with your own status system**
+- `esx_status`: [Download here](https://github.com/esx-framework/esx_status) (**[IMPORTANT]: Only if using ESX, if not configure with your own status system**)
