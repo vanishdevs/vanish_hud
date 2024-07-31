@@ -1,4 +1,8 @@
 ### Hud System
+![](https://img.shields.io/github/downloads/vanishdevs/vanish_hud/total?logo=github)
+![](https://img.shields.io/github/downloads/vanishdevs/vanish_hud/latest/total?logo=github)
+![](https://img.shields.io/github/contributors/vanishdevs/vanish_hud?logo=github)
+![](https://img.shields.io/github/v/release/vanishdevs/vanish_hud?logo=github)
 
 This resource enhances the user experience by providing a customizable and functional display interface for various game elements. This resource includes several features to improve gameplay visibility and interaction. This resource is mostly standalone for it's features meaning it does not use any framework to fetch certain variables, but in order for the status (`thirst, hunger`) to properly work, you will have to integrate another resource with it, ESX status is already integrated for users within.
 
