@@ -23,11 +23,12 @@ CreateThread(function()
 
         myHunger, myThirst = GetNeedsStatus()
 
-        local player = cache.ped
-        health = GetEntityHealth(player) - 100
-        armor = GetPedArmour(player)
-        oxygen = math.floor(GetPlayerSprintTimeRemaining(PlayerId()) * 10)
-        stress = NetworkIsPlayerTalking(PlayerId()) and 100 or 0
+        local playerPed = cache.ped
+        local playerId = cache.playerId
+        health = GetEntityHealth(playerPed) - 100
+        armor = GetPedArmour(playerPed)
+        oxygen = math.floor(GetPlayerSprintTimeRemaining(playerId) * 10)
+        stress = NetworkIsPlayerTalking(playerId) and 100 or 0
 
         SendNUIMessage({
             action = "updateStatusHud",

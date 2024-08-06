@@ -48,12 +48,11 @@ CreateThread(function()
     local screenPosX, screenPosY = GetScreenPos(w, h)
     local streetLabelTextColour = GetConvar('hud:StreetLabelTextColor') or {255, 255, 255}
     while true do
-        Wait(0)
-        local PlayerPed = cache.ped
-        pedInVeh = IsPedInAnyVehicle(PlayerPed, false)
+        local playerPed = cache.ped
+        pedInVeh = IsPedInAnyVehicle(playerPed, false)
         
         local pxDegree = 0.06 / 180
-        local playerHeadingDegrees = 360.0 - GetEntityHeading(PlayerPed)
+        local playerHeadingDegrees = 360.0 - GetEntityHeading(playerPed)
         local tickDegree = playerHeadingDegrees - 180 / 2
         local tickDegreeRemainder = CompassOptions.ticksBetweenCardinals - (tickDegree % CompassOptions.ticksBetweenCardinals)
         local tickPosition = screenPosX + 0.005 + tickDegreeRemainder * pxDegree
@@ -80,16 +79,18 @@ CreateThread(function()
         if pedInVeh then
             DrawText2D(locationText, 4, streetLabelTextColour, 0.50, screenPosX + 0.037, screenPosY + 0.1100, true)
         end
+        Wait(0)
     end
 end)
 
 CreateThread(function()
     while true do
         local sleepThread = 5000
-        local player = cache.ped
+        local playerPed = cache.ped
+
         if pedInVeh then
             sleepThread = 1000
-            local position = GetEntityCoords(player)
+            local position = GetEntityCoords(playerPed)
             local zoneName = ZoneData.Zones[GetNameOfZone(position.x, position.y, position.z)]
             local zoneNameFull = (zoneName and "[" .. zoneName .. "]") or "[Unknown]"
 

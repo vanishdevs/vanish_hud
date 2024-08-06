@@ -10,10 +10,10 @@ local y = 0.002
 
 CreateThread(function()
     while true do
-        local ped = cache.ped
+        local playerPed = cache.ped
 
         if IsPedInAnyVehicle(ped) then
-            local vehicle = GetVehiclePedIsIn(ped)
+            local vehicle = GetVehiclePedIsIn(playerPed)
             local speed = GetEntitySpeed(vehicle)
 
             mph = tostring(math.ceil(speed * 2.236936))
