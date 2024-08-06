@@ -1,7 +1,7 @@
 fx_version 'adamant'
 game 'gta5'
 lua54 'yes'
-version '1.0.0'
+version '1.0.1'
 
 author 'vanishdev'
 description 'A simple looking hud, UI was inspired from another resource, many features included.'
