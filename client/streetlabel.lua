@@ -79,6 +79,7 @@ CreateThread(function()
         if pedInVeh then
             DrawText2D(locationText, 4, streetLabelTextColour, 0.50, screenPosX + 0.037, screenPosY + 0.1100, true)
         end
+        
         Wait(0)
     end
 end)
@@ -98,6 +99,7 @@ CreateThread(function()
             locationText = streetName or locationText
             locationText = (zoneNameFull and locationText) and (locationText .. " | " .. zoneNameFull) or locationText
         end
+        
         Wait(sleepThread)
     end
 end)
