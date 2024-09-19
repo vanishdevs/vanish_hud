@@ -8,10 +8,10 @@ local w, h = GetActiveScreenResolution()
 local locationText = ""
 local pedInVeh = false
 
--- @param w (number) The width.
--- @param h (number) The height.
--- @return screenPosX (number) The X coordinate of the screen position.
--- @return screenPosY (number) The Y coordinate of the screen position.
+---@param w (number) The width.
+---@param h (number) The height.
+---@return screenPosX (number) The X coordinate of the screen position.
+---@return screenPosY (number) The Y coordinate of the screen position.
 local function GetScreenPos(width, height)
     local getRes = ResData.ResolutionPosition[width] and ResData.ResolutionPosition[width][height]
     if getRes then
@@ -21,8 +21,8 @@ local function GetScreenPos(width, height)
     end
 end
 
--- @param degree (number) The degree value to be converted.
--- @return label (string) The label representing the cardinal or intercardinal direction.
+---@param degree (number) The degree value to be converted.
+---@return label (string) The label representing the cardinal or intercardinal direction.
 local function ConvertDegreesToInterDirection(degree)
 	local directions = {
 		{label = "N ", range = {0, 22.5}},

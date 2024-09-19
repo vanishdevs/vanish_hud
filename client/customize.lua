@@ -19,7 +19,7 @@ CompassOptions = {
     }
 }
 
--- @param msg (string) The necessary message that will be displayed in the notification
+---@param msg (string) The necessary message that will be displayed in the notification
 function ShowNotification(msg)
     local getNotificationType = GetConvar('hud:NotificationSystem', 'ox_lib')
     local getNotificationTitle = GetConvar('hud:NotificationTitle', 'Seatbelt')
@@ -32,8 +32,8 @@ function ShowNotification(msg)
     end
 end
 
--- @return GetHunger The current hunger status (percentage).
--- @return GetThirst The current thirst status (percentage).
+---@return GetHunger The current hunger status (percentage).
+---@return GetThirst The current thirst status (percentage).
 function GetNeedsStatus()
     local getResource = GetConvar('hud:RequiredResource', 'esx_status')
 	local GetHunger, GetThirst
@@ -52,14 +52,14 @@ function GetNeedsStatus()
 	end
 end
 
--- @param text (string) The text to be drawn.
--- @param font (number, optional) The font ID. Defaults to 4 if not specified.
--- @param colour (table, optional) The color of the text as RGBA values in a table {r, g, b, a}. If not specified, defaults to white (255, 255, 255, 255).
--- @param scale (number, optional) The scale of the text. Defaults to 1.0 if not specified.
--- @param x (number) The X coordinate of the text position.
--- @param y (number) The Y coordinate of the text position.
--- @param outline (boolean, optional) Whether to draw text with an outline. Defaults to false if not specified.
--- @param centered (boolean, optional) Whether the text should be centered. Defaults to false if not specified.
+---@param text (string) The text to be drawn.
+---@param font (number, optional) The font ID. Defaults to 4 if not specified.
+---@param colour (table, optional) The color of the text as RGBA values in a table {r, g, b, a}. If not specified, defaults to white (255, 255, 255, 255).
+---@param scale (number, optional) The scale of the text. Defaults to 1.0 if not specified.
+---@param x (number) The X coordinate of the text position.
+---@param y (number) The Y coordinate of the text position.
+---@param outline (boolean, optional) Whether to draw text with an outline. Defaults to false if not specified.
+---@param centered (boolean, optional) Whether the text should be centered. Defaults to false if not specified.
 -- Edit this function if you want to customize the look of the streetlabel
 function DrawText2D(text, font, colour, scale, x, y, outline, centered)
     font = font or 4
@@ -88,18 +88,18 @@ function DrawText2D(text, font, colour, scale, x, y, outline, centered)
 	DrawText(x + -0.002, y + -0.029)
 end
 
--- @param x The X-coordinate of the text.
--- @param y The Y-coordinate of the text.
--- @param w The width of the text.
--- @param h The height of the text.
--- @param sc The scale of the text.
--- @param text The text to be displayed.
--- @param r The red color component (0-255).
--- @param g The green color component (0-255).
--- @param b The blue color component (0-255).
--- @param a The alpha (transparency) value (0-255).
--- @param font The font to be used for the text.
--- @param jus The justification of the text (0-2).
+---@param x The X-coordinate of the text.
+---@param y The Y-coordinate of the text.
+---@param w The width of the text.
+---@param h The height of the text.
+---@param sc The scale of the text.
+---@param text The text to be displayed.
+---@param r The red color component (0-255).
+---@param g The green color component (0-255).
+---@param b The blue color component (0-255).
+---@param a The alpha (transparency) value (0-255).
+---@param font The font to be used for the text.
+---@param jus The justification of the text (0-2).
 -- Edit this function if you would like to customize the look of the speedometer
 function DrawAdvancedText(x, y, w, h, sc, text, r, g, b, a, font, jus)
     SetTextFont(font)
