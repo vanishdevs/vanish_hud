@@ -76,7 +76,7 @@ CreateThread(function()
             tickDegree = tickDegree + CompassOptions.ticksBetweenCardinals
             tickPosition = tickPosition + pxDegree * CompassOptions.ticksBetweenCardinals
         end
-        if pedInVeh then
+        if pedInVeh and hudVisible then
             DrawText2D(locationText, 4, streetLabelTextColour, 0.50, screenPosX + 0.037, screenPosY + 0.1100, true)
         end
         
@@ -89,7 +89,7 @@ CreateThread(function()
         local sleepThread = 5000
         local playerPed = cache.ped
 
-        if pedInVeh then
+        if pedInVeh and hudVisible then
             sleepThread = 1000
             local position = GetEntityCoords(playerPed)
             local zoneName = ZoneData.Zones[GetNameOfZone(position.x, position.y, position.z)]
