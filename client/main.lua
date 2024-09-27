@@ -1,7 +1,7 @@
-local togglehud = true
-local showRadar = GetConvarInt('hud:DisplayRadarOnFoot', 1) == 1
+local showRadarOnFoot = GetConvarInt('hud:DisplayRadarOnFoot', 1) == 1
+hudVisible <global> = true
 
-if not showRadar then
+if not showRadarOnFoot then
     CreateThread(function()
         while true do
             local playerPed = cache.ped
@@ -32,7 +32,7 @@ CreateThread(function()
 
         SendNUIMessage({
             action = "updateStatusHud",
-            show = togglehud,
+            show = hudVisible,
             hunger = myHunger,
             thirst = myThirst,
             health = health,
@@ -45,4 +45,4 @@ CreateThread(function()
     end
 end)
 
-exports('togglehud', function(state) togglehud = state end)
+exports('toggleHud', function(state) hudVisible = state end)
